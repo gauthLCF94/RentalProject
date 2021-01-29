@@ -1,9 +1,9 @@
 <h1>Appartement</h1>
 
 <ul>
-  <li> <%= @appartement.price %> </li>
-  <li> <%= @appartement.adress %> </li>
-  <li> <%= @appartement.postcode %> <%= @appartement.price %> </li>
+  <li> <%= @appartement.price %>€ </li>
+  <li> <%= @appartement.address %> </li>
+  <li> <%= @appartement.postcode %> <%= @appartement.city %> </li>
 </ul>
 
 <% if policy(@appartement).edit? %>

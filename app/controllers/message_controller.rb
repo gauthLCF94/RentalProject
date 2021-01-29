@@ -3,7 +3,7 @@ class MessageController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @messages = policy_scope(message)
+    @messages = policy_scope(Message)
     respond_to do |format|
       format.html
       format.xml { render xml: @messages }

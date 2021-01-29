@@ -21,7 +21,7 @@ class AppartementsController < ApplicationController
     authorize @appartement
     @appartement.user_id = current_user.id
     if @appartement.save
-      redirect to appartement_path(@appartement)
+      redirect_to appartement_path(@appartement)
     else
       render 'new'
     end
