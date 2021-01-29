@@ -1,0 +1,11 @@
+<h1>Message</h1>
+
+<ul>
+  <li> <%= @message.contenu %> </li>
+  <li> <%= @message.appartement_id %> </li>
+  <li> <%= @message.user_id %> </li>
+</ul>
+
+<% if policy(@message).edit? %>
+  <%= link_to 'Edit', edit_message_path(@message) %>
+<% end %>

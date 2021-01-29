@@ -1,0 +1,10 @@
+<h1>All messages</h1>
+
+<ul>
+  <% @messages.each do |message| %>
+    <li><%= message.contenu %></li>
+    <li><%= link_to message.apparetement_id, message_path(message) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Add messages", new_message_path %>
