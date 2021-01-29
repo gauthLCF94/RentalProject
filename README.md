@@ -1,24 +1,9 @@
-# README
+Projet Architecture Logicielle par Gauthier Lecouffe et Antoine Haller
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Site de location immobillier style "airbnb". Avec un système d'authentification pour les utilisateurs. 
 
-Things you may want to cover:
+Model de users (id/password/email/email/last_name/first_name)
 
-* Ruby version
+Model du messages (id/contenu/user_id/appartement_id)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Model du appartements (id/name/price/description/address/postcode/city/user_id)
