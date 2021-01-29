@@ -1,2 +1,2 @@
-Gauthier Lecouffe (Authentification/CRUD)
+Gauthier Lecouffe (CRUD/Authentication/Autorisations)
 Antoine HALLER (Modèles/Diagramme/Seed)
