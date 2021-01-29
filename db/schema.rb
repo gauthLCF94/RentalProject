@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_29_001033) do
+ActiveRecord::Schema.define(version: 2021_01_29_094909) do
 
-  create_table "appartements", force: :cascade do |t|
+  create_table "appartement", force: :cascade do |t|
     t.string "name"
     t.integer "price"
     t.text "description"
@@ -22,17 +22,17 @@ ActiveRecord::Schema.define(version: 2021_01_29_001033) do
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_appartements_on_user_id"
+    t.index ["user_id"], name: "index_appartement_on_user_id"
   end
 
-  create_table "messages", force: :cascade do |t|
+  create_table "message", force: :cascade do |t|
     t.text "contenu"
     t.integer "user_id", null: false
     t.integer "appartement_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["appartement_id"], name: "index_messages_on_appartement_id"
-    t.index ["user_id"], name: "index_messages_on_user_id"
+    t.index ["appartement_id"], name: "index_message_on_appartement_id"
+    t.index ["user_id"], name: "index_message_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2021_01_29_001033) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "appartements", "users"
-  add_foreign_key "messages", "appartements"
-  add_foreign_key "messages", "users"
+  add_foreign_key "appartement", "users"
+  add_foreign_key "message", "appartement"
+  add_foreign_key "message", "users"
 end

@@ -41,7 +41,7 @@ class MessageController < ApplicationController
 
   def update
     @message.update(message_params)
-    redirect_to message_path(@message)
+    redirect_to messages_path(@message)
   end
 
   def destroy
