@@ -1,0 +1,11 @@
+<h1>Appartement</h1>
+
+<ul>
+  <li> <%= @appartement.price %> </li>
+  <li> <%= @appartement.adress %> </li>
+  <li> <%= @appartement.postcode %> <%= @appartement.price %> </li>
+</ul>
+
+<% if policy(@appartement).edit? %>
+  <%= link_to 'Edit', edit_appartement_path(@appartement) %>
+<% end %>
