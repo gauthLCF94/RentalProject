@@ -1,12 +1,17 @@
-class AppartementController < ApplicationController
-  before_action :set_restaurant, only: [:show, :edit, :update]
+class AppartementsController < ApplicationController
+  before_action :set_appartement, only: [:show, :edit, :update]
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @appartements = policy_scope(Appartement)
+    respond_to do |format|
+      format.html
+      format.xml { render xml: @appartements }
+      format.json { render json: @appartements }
+    end
   end
 
-  def new # return HTML form for create
+  def new
     @appartement = Appartement.new
     authorize @appartement
   end
@@ -23,6 +28,11 @@ class AppartementController < ApplicationController
   end
 
   def show
+    respond_to do |format|
+      format.html
+      format.xml { render xml: @appartements }
+      format.json { render json: @appartements }
+    end
   end
 
   def edit

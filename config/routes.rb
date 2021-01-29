@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :appartements, :messages
+  #resources :appartements, :messages
   root to: "pages#home"
   get 'home', to: "pages#home"
+  get 'appartements', to: "appartements#index"
 end
