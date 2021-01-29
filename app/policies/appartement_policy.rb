@@ -18,7 +18,7 @@ class AppartementPolicy < ApplicationPolicy
   end
 
   def edit?
-    record.user_id == user.id
+    User.find_by(record.user_id) == user
   end
 
   def update?
